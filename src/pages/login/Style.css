@@ -1,0 +1,86 @@
+/* src/pages/Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-button {
+  margin-top: 1.5rem;
+  --border-radius: 8px;
+  height: 48px;
+}
+
+.google-button {
+  --border-radius: 8px;
+  height: 48px;
+  margin-top: 1rem;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 45%;
+  height: 1px;
+  background-color: var(--ion-color-medium);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  background-color: var(--ion-color-background);
+  padding: 0 10px;
+  color: var(--ion-color-medium);
+  font-size: 0.9rem;
+}
+
+.signup-prompt {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.signup-link {
+  color: var(--ion-color-primary);
+  font-weight: bold;
+}
