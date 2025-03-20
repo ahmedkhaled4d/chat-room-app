@@ -15,7 +15,7 @@ import {
   IonCol,
   IonGrid,
 } from "@ionic/react";
-import { arrowForward, home, informationCircle, mail } from "ionicons/icons";
+import { arrowForward } from "ionicons/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
 import "swiper/css";
@@ -73,62 +73,6 @@ const Index: React.FC = () => {
           </Swiper>
         </div>
 
-        {/* Main Content with Scrollbar */}
-        <div className="scrollable-content">
-          <IonGrid>
-            <IonRow>
-              <IonCol size="12">
-                <h2>Featured Content</h2>
-              </IonCol>
-            </IonRow>
-
-            <IonRow>
-              <IonCol size="12" sizeMd="4">
-                <IonCard>
-                  <IonCardHeader>
-                    <IonCardTitle>Latest News</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    <p>
-                      Stay updated with our company's recent developments and
-                      industry trends.
-                    </p>
-                    <IonButton fill="clear">View All News</IonButton>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size="12" sizeMd="4">
-                <IonCard>
-                  <IonCardHeader>
-                    <IonCardTitle>Events</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    <p>
-                      Join us at upcoming events and connect with our team in
-                      person.
-                    </p>
-                    <IonButton fill="clear">See Calendar</IonButton>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-              <IonCol size="12" sizeMd="4">
-                <IonCard>
-                  <IonCardHeader>
-                    <IonCardTitle>Resources</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>
-                    <p>
-                      Access helpful guides, tutorials, and documentation for
-                      our products.
-                    </p>
-                    <IonButton fill="clear">Browse Resources</IonButton>
-                  </IonCardContent>
-                </IonCard>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
-        </div>
-
         {/* Sponsors Logos Horizontal Scrolling Section with Swiper */}
         <div className="sponsors-section">
           <h2>Our Sponsors</h2>
@@ -172,33 +116,37 @@ const Index: React.FC = () => {
           </Swiper>
         </div>
 
-        {/* Footer Navigation */}
-        <div className="footer-nav">
+        {/* Main Content with Scrollbar */}
+        <div className="scrollable-content">
           <IonGrid>
             <IonRow>
-              <IonCol size="4" className="ion-text-center">
-                <IonButton fill="clear" className="nav-button">
-                  <div className="button-inner">
-                    <IonIcon icon={home} />
-                    <div>Home</div>
-                  </div>
-                </IonButton>
+              <IonCol size="12" sizeMd="4">
+                <IonCard>
+                  <IonCardHeader>
+                    <IonCardTitle>Events</IonCardTitle>
+                  </IonCardHeader>
+                  <IonCardContent>
+                    <p>
+                      Join us at upcoming events and connect with our team in
+                      person.
+                    </p>
+                    <IonButton fill="clear">See Calendar</IonButton>
+                  </IonCardContent>
+                </IonCard>
               </IonCol>
-              <IonCol size="4" className="ion-text-center">
-                <IonButton fill="clear" className="nav-button">
-                  <div className="button-inner">
-                    <IonIcon icon={informationCircle} />
-                    <div>About</div>
-                  </div>
-                </IonButton>
-              </IonCol>
-              <IonCol size="4" className="ion-text-center">
-                <IonButton fill="clear" className="nav-button">
-                  <div className="button-inner">
-                    <IonIcon icon={mail} />
-                    <div>Contact</div>
-                  </div>
-                </IonButton>
+              <IonCol size="12" sizeMd="4">
+                <IonCard>
+                  <IonCardHeader>
+                    <IonCardTitle>Resources</IonCardTitle>
+                  </IonCardHeader>
+                  <IonCardContent>
+                    <p>
+                      Access helpful guides, tutorials, and documentation for
+                      our products.
+                    </p>
+                    <IonButton fill="clear">Browse Resources</IonButton>
+                  </IonCardContent>
+                </IonCard>
               </IonCol>
             </IonRow>
           </IonGrid>
