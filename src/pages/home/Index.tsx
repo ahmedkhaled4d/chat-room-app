@@ -5,12 +5,10 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../../components/ExploreContainer";
-import "./Tab1.css";
-import { useTranslation } from "react-i18next";
+import "./Style.css";
+import WelcomeContainer from "../../components/welcome/WelcomeContainer";
 
 const Index: React.FC = () => {
-  const [t] = useTranslation("global");
   // const [t, i18n] = useTranslation("global");
   // const handleChangeLanguage = (lang: string) => {
   //   i18n.changeLanguage(lang);
@@ -28,8 +26,7 @@ const Index: React.FC = () => {
             <IonTitle size="large">Home Page</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <h1>{t("header.text")}</h1>
-        <ExploreContainer name="Home Page page" />
+        <WelcomeContainer name="Ahmed" />
       </IonContent>
     </IonPage>
   );

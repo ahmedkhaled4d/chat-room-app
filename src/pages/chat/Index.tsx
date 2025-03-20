@@ -5,8 +5,8 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import ExploreContainer from "../../components/ExploreContainer";
-import "./Tab2.css";
+import "./Style.css";
+import WelcomeContainer from "../../components/welcome/WelcomeContainer";
 
 const Index: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const Index: React.FC = () => {
             <IonTitle size="large">Chat Page</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Chat Page page" />
+        <WelcomeContainer name="Chat Page page" />
       </IonContent>
     </IonPage>
   );
