@@ -14,6 +14,7 @@ import { ellipse, square, triangle } from "ionicons/icons";
 import Home from "./pages/home/Index";
 import Chat from "./pages/chat/Index";
 import Account from "./pages/account/Index";
+import Login from "./pages/login/Index";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -60,6 +61,9 @@ const App: React.FC = () => (
           </Route>
           <Route path="/account">
             <Account />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
