@@ -1,4 +1,5 @@
 import {
+  IonButton,
   IonContent,
   IonHeader,
   IonPage,
@@ -6,9 +7,22 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import "./Style.css";
-import WelcomeContainer from "../../components/welcome/WelcomeContainer";
-
+import { useAuth } from "../../contexts/AuthContext";
+import { getAuth, signOut } from "firebase/auth";
 const Index: React.FC = () => {
+  const { currentUser } = useAuth();
+  const auth = getAuth();
+  // const [t, i18n] = useTranslation("global");
+  // const handleChangeLanguage = (lang: string) => {
+  //   i18n.changeLanguage(lang);
+  // };
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
   return (
     <IonPage>
       <IonHeader>
@@ -19,10 +33,14 @@ const Index: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Account Page</IonTitle>
+            <IonTitle size="large">
+              Hi {currentUser?.displayName || currentUser?.email || "Geust"}
+            </IonTitle>
           </IonToolbar>
         </IonHeader>
-        <WelcomeContainer name="Account Page page" />
+        <IonButton expand="block" onClick={handleLogout}>
+          Logout
+        </IonButton>
       </IonContent>
     </IonPage>
   );

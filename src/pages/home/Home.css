@@ -1,0 +1,104 @@
+/* Home.css */
+
+/* Banner/Carousel styling */
+.banner-section {
+  margin-bottom: 20px;
+}
+
+.banner-swiper {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slide-content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #4a90e2, #63bff0);
+  color: white;
+}
+
+.slide-content h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Scrollable content section */
+.scrollable-content {
+  height: auto;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Sponsors section */
+.sponsors-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sponsors-section h2 {
+  margin-bottom: 15px;
+}
+
+.sponsors-swiper {
+  height: 120px;
+  width: 100%;
+}
+
+.sponsor-logo {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  height: 100px;
+  width: 100%;
+}
+
+.sponsor-logo img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Footer navigation */
+.footer-nav {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.nav-button {
+  width: 100%;
+}
+
+.button-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.button-inner ion-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+/* Swiper pagination customization */
+:root {
+  --swiper-theme-color: #4a90e2;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+}
