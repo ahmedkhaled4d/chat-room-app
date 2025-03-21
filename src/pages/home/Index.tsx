@@ -15,53 +15,42 @@ import {
   IonGrid,
 } from "@ionic/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import "./Home.css";
+import HomeBunner from "../../components/slider/HomeBunner";
+import { useTranslation } from "react-i18next";
 
 const Index: React.FC = () => {
+  const { t } = useTranslation("global");
+  const bunners = [
+    {
+      title: "Welcome to Our Platform",
+      content: "Discover amazing features and services",
+    },
+    {
+      title: "Special Offers",
+      content: "Check out our limited time promotions",
+    },
+    {
+      title: "Join Our Community",
+      content: "Connect with like-minded individuals",
+    },
+  ];
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>My App</IonTitle>
+          <IonTitle> {t("header.home")}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
         {/* Banner/Carousel Section with Swiper */}
-        <div className="banner-section">
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={0}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            className="banner-swiper"
-          >
-            <SwiperSlide>
-              <div className="slide-content">
-                <h1>Welcome to Our Platform</h1>
-                <p>Discover amazing features and services</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-content">
-                <h1>Special Offers</h1>
-                <p>Check out our limited time promotions</p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-content">
-                <h1>Join Our Community</h1>
-                <p>Connect with like-minded individuals</p>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
 
+        <HomeBunner data={bunners} />
         {/* Sponsors Logos Horizontal Scrolling Section with Swiper */}
         <div className="sponsors-section">
           <h2>Our Sponsors</h2>

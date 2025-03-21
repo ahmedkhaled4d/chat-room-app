@@ -33,6 +33,7 @@ import {
 } from "ionicons/icons";
 const Index: React.FC = () => {
   const { currentUser } = useAuth();
+
   const auth = getAuth();
   const { i18n } = useTranslation("global");
   const [darkMode, setDarkMode] = useState(false);
@@ -40,6 +41,10 @@ const Index: React.FC = () => {
   // Handle language change
   const handleLanguageChange = (event: CustomEvent) => {
     i18n.changeLanguage(event.detail.value);
+
+    document.documentElement.dir = String(i18n.dir);
+    document.documentElement.lang = String(i18n.language);
+
     presentToast({
       message: `Language changed to ${
         event.detail.value === "en"

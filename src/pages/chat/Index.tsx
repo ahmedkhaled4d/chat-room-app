@@ -111,7 +111,6 @@ const Index: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const formatTime = (timestamp: any) => {
     if (!timestamp) return "";
-
     const date = timestamp.toDate();
     return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
@@ -154,7 +153,9 @@ const Index: React.FC = () => {
                         ? "You"
                         : message.userName}
                     </h2>
-                    <p> {formatTime(message.timestamp)}</p>
+                    <IonText color="warning" className="text-end">
+                      {formatTime(message.timestamp)}
+                    </IonText>
                   </IonLabel>
                   <IonText className="message-text">
                     <p>{message.text}</p>
