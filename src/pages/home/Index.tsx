@@ -10,12 +10,10 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonIcon,
   IonRow,
   IonCol,
   IonGrid,
 } from "@ionic/react";
-import { arrowForward } from "ionicons/icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
 import "swiper/css";
@@ -47,27 +45,18 @@ const Index: React.FC = () => {
               <div className="slide-content">
                 <h1>Welcome to Our Platform</h1>
                 <p>Discover amazing features and services</p>
-                <IonButton>
-                  Learn More <IonIcon slot="end" icon={arrowForward} />
-                </IonButton>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-content">
                 <h1>Special Offers</h1>
                 <p>Check out our limited time promotions</p>
-                <IonButton>
-                  View Offers <IonIcon slot="end" icon={arrowForward} />
-                </IonButton>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="slide-content">
                 <h1>Join Our Community</h1>
                 <p>Connect with like-minded individuals</p>
-                <IonButton>
-                  Sign Up <IonIcon slot="end" icon={arrowForward} />
-                </IonButton>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -85,32 +74,50 @@ const Index: React.FC = () => {
           >
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 1" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/15.svg"
+                  alt="Sponsor 1"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 2" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/1.png"
+                  alt="Sponsor 2"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 3" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/3.png"
+                  alt="Sponsor 3"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 4" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/10.png"
+                  alt="Sponsor 4"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 5" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/13.png"
+                  alt="Sponsor 5"
+                />
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="sponsor-logo">
-                <img src="/api/placeholder/200/100" alt="Sponsor 6" />
+                <img
+                  src="https://eayni-assets.s3.amazonaws.com/app/clients/9.png"
+                  alt="Sponsor 6"
+                />
               </div>
             </SwiperSlide>
           </Swiper>
